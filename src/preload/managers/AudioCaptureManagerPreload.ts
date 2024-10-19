@@ -208,6 +208,7 @@ export class AudioCaptureManagerPreload {
       this._mediaStreams[viewId] = stream;
 
       const output = this._audioContext.createGain();
+      output.gain.value = 0.1;
       this._mediaStreamOutputs[viewId] = output;
 
       const audioSource = this._audioContext.createMediaStreamSource(stream);
